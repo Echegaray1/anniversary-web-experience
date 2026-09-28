@@ -52,7 +52,7 @@ export function AnniversaryExperience() {
             {unlocked ? (
               <MemoriesContent key="content" onFinale={() => setFinale(true)} />
             ) : (
-              <UnlockScreen key="unlock" onUnlock={handleUnlock} />
+              <UnlockScreen key="unlock" onUnlock={handleUnlock} onGesture={music.prime} />
             )}
           </AnimatePresence>
 
