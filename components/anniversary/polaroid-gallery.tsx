@@ -15,7 +15,7 @@ type Memory = {
 // Replace each `src` with your Stitch GIFs (e.g. /memories/stitch-1.gif).
 const MEMORIES: Memory[] = [
   {
-    src: '/memories/stitch-placeholder.svg',
+    src: '/memories/foto1.jpeg',
     caption: 'Nuestro primer recuerdo',
     quote: 'Desde que llegaste, todo brilla un poquito más, como las estrellas sobre Hawái.',
     tilt: -3,
