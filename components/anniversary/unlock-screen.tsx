@@ -8,7 +8,13 @@ const HOLD_MS = 3000
 const RADIUS = 62
 const CIRCUMFERENCE = 2 * Math.PI * RADIUS
 
-export function UnlockScreen({ onUnlock }: { onUnlock: () => void }) {
+export function UnlockScreen({
+  onUnlock,
+  onGesture,
+}: {
+  onUnlock: () => void
+  onGesture?: () => void
+}) {
   const [progress, setProgress] = useState(0)
   const [holding, setHolding] = useState(false)
   const [done, setDone] = useState(false)
@@ -86,14 +92,19 @@ export function UnlockScreen({ onUnlock }: { onUnlock: () => void }) {
           type="button"
           onPointerDown={(e) => {
             e.currentTarget.setPointerCapture(e.pointerId)
+            onGesture?.()
             start()
           }}
-          onPointerUp={stop}
+          onPointerUp={() => {
+            onGesture?.()
+            stop()
+          }}
           onPointerCancel={stop}
           onLostPointerCapture={stop}
           onKeyDown={(e) => {
             if ((e.key === ' ' || e.key === 'Enter') && !e.repeat) {
               e.preventDefault()
+              onGesture?.()
               start()
             }
           }}
