@@ -21,13 +21,13 @@ const MEMORIES: Memory[] = [
     tilt: -3,
   },
   {
-    src: '/memories/stitch-placeholder.svg',
+    src: '/memories/foto2.png',
     caption: 'Tu sonrisa',
     quote: 'Tu sonrisa es mi lugar favorito en todo el universo, y en todos los planetas.',
     tilt: 2.5,
   },
   {
-    src: '/memories/stitch-placeholder.svg',
+    src: '/memories/foto3.png',
     caption: 'Nuestra Ohana',
     quote: 'Contigo quiero seguir sumando días, meses y aventuras. Esto apenas comienza.',
     tilt: -2,
